@@ -8,7 +8,7 @@
 </head>
 <body>
     <input type="text" id="resposta" placeholder="Type your answer here">
-    <p class="hidden-text">Youtube link</p>
+    <p class="hidden-text">yt link</p>
 
     <script>
         document.getElementById("resposta").addEventListener("keypress", function(event) {
@@ -20,9 +20,10 @@
         function verificarResposta() {
             const resposta = document.getElementById("resposta").value.toLowerCase();
             if (resposta === "frustrated") {
+                // Redireciona para a próxima página (frustration.html)
                 window.location.href = "https://sheusedtocallmediva.github.io/frustration.html";
             } else {
-                alert("Wrong answer. You can do better.");
+                alert("Wrong answer. Try again.");
             }
         }
     </script>
