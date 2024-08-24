@@ -1,27 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>initiative</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Initiative</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        input[type="text"] {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+        }
+        a {
+            position: absolute;
+            bottom: 10px;
+            color: grey;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <img alt="Someone is calling you..." class="central-image">
-        <input type="text" id="resposta-1" placeholder="Type the answer.">
-        <button onclick="verificarResposta()">Confirm</button>
-    </div>
-    <div class="footer">
-        <a href="https://x.com/MercyDeus_/status/1827126180471845238">:)</a>
-    </div>
+    <h1>Someone is calling you...</h1>
+    <input type="text" id="resposta" placeholder="Type your answer here">
+    <a href="https://sheusedtocallmediva.github.io/ringring" target="_blank">Click here for more...</a>
+
     <script>
+        document.getElementById("resposta").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                verificarResposta();
+            }
+        });
+
         function verificarResposta() {
-            const resposta = document.getElementById("resposta-1").value.toLowerCase();
+            const resposta = document.getElementById("resposta").value.toLowerCase();
             if (resposta === "copycat") {
-                window.location.href = "ringring.html";
+                window.location.href = "https://sheusedtocallmediva.github.io/ringring";
             } else {
-                alert("Wrong.");
+                alert("Wrong answer. Try again.");
             }
         }
     </script>
