@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>initiative</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="RINGRINGRING.png" alt="Imagem Central" class="central-image">
+        <input type="text" id="resposta-1" placeholder="Digite a resposta aqui">
+        <button onclick="verificarResposta()">Enviar</button>
+    </div>
+    <div class="footer">
+        <a href="https://x.com/MercyDeus_/status/1827126180471845238">Pista</a>
+    </div>
+    <script>
+        function verificarResposta() {
+            const resposta = document.getElementById("resposta-1").value.toLowerCase();
+            if (resposta === "copycat") {
+                window.location.href = "ringring.html";
+            } else {
+                alert("Wrong.");
+            }
+        }
+    </script>
+</body>
+</html>
