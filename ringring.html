@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ring Ring</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="resposta-2" placeholder="Type the answer :)">
+        <button onclick="verificarResposta()">Confirm</button>
+    </div>
+    <p id="hidden-text">youtube link.</p>
+    <script>
+        function verificarResposta() {
+            const resposta = document.getElementById("resposta-2").value.toLowerCase();
+            if (resposta === "frustrated") {
+                window.location.href = "frustration.html";
+            } else {
+                alert("You can do better.");
+            }
+        }
+    </script>
+</body>
+</html>
