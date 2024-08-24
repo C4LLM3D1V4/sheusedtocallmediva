@@ -1,3 +1,4 @@
+/* Estilo global para o corpo da página */
 body {
     background-color: black;
     color: white;
@@ -8,14 +9,22 @@ body {
     height: 100vh;
     flex-direction: column;
     text-align: center;
+    margin: 0;
 }
 
+/* Estilo para o input de texto */
 input[type="text"] {
     margin-top: 20px;
     padding: 10px;
     font-size: 18px;
+    border: 1px solid white;
+    background-color: #333;
+    color: white;
+    width: 80%;
+    max-width: 400px;
 }
 
+/* Estilo para o link na parte inferior */
 a {
     position: absolute;
     bottom: 10px;
@@ -24,8 +33,9 @@ a {
     font-size: 14px;
 }
 
+/* Estilo para o texto oculto na página ringring.html */
 .hidden-text {
-    color: black;
+    color: black; /* Mesma cor do fundo para "esconder" o texto */
     font-size: 14px;
     position: absolute;
     top: 20px;
