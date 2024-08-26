@@ -47,3 +47,63 @@ a {
 .hidden-text:hover {
     color: white; /* Cor do texto ao passar o mouse */
 }
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.phone-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#input-number {
+    width: 200px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    background-color: #333;
+    color: white;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.key {
+    padding: 15px;
+    font-size: 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.key:hover {
+    background-color: #777;
+}
+
+.delete {
+    grid-column: span 2;
+    background-color: #a00;
+}
+
+.submit {
+    grid-column: span 2;
+    background-color: #0a0;
+}
