@@ -28,27 +28,51 @@
     </div>
 
     <script>
+        const sounds = {
+            1: new Audio('sounds/1.mp3'),
+            2: new Audio('sounds/2.mp3'),
+            3: new Audio('sounds/3.mp3'),
+            4: new Audio('sounds/4.mp3'),
+            5: new Audio('sounds/5.mp3'),
+            6: new Audio('sounds/6.mp3'),
+            7: new Audio('sounds/7.mp3'),
+            8: new Audio('sounds/8.mp3'),
+            9: new Audio('sounds/9.mp3'),
+            0: new Audio('sounds/0.mp3'),
+            delete: new Audio('sounds/delete.mp3'),
+            proceed: new Audio('sounds/proceed.mp3'),
+        };
+
         function pressKey(num) {
             const input = document.getElementById('input-number');
             if (input.value.length < 6) {
                 input.value += num;
+                playSound(num);
+            }
+        }
+
+        function playSound(key) {
+            if (sounds[key]) {
+                sounds[key].play();
             }
         }
 
         function clearInput() {
+            playSound('delete');
             document.getElementById('input-number').value = '';
         }
 
         function submitNumber() {
+            playSound('proceed');
             const input = document.getElementById('input-number').value;
             
             // Redirecionar com base no número digitado
-            if (input === '1') {
+            if (input === '123456') {
                 window.location.href = 'https://c4llm3d1v4.github.io/sheusedtocallmediva/';
             } else if (input === '654321') {
                 window.location.href = 'https://c4llm3d1v4.github.io/sheusedtocallmediva/';
             } else {
-                alert('Invalid number.');
+                alert('Invalid number. Try again.');
             }
         }
     </script>
