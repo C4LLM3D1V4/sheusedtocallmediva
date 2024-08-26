@@ -43,6 +43,13 @@
             proceed: new Audio('sounds/proceed.mp3'),
         };
 
+        // Reduz o volume dos sons em aproximadamente -2 dB (~20-25% de redução)
+        for (let key in sounds) {
+            if (sounds.hasOwnProperty(key)) {
+                sounds[key].volume = 0.75;
+            }
+        }
+
         function pressKey(num) {
             const input = document.getElementById('input-number');
             if (input.value.length < 6) {
@@ -67,9 +74,9 @@
             const input = document.getElementById('input-number').value;
             
             // Redirecionar com base no número digitado
-            if (input === '123456') {
-                window.location.href = 'https://c4llm3d1v4.github.io/sheusedtocallmediva/';
-            } else if (input === '654321') {
+            if (input === '113165') {
+                window.location.href = 'https://c4llm3d1v4.github.io/sheusedtocallmediva/birth.html';
+            } else if (input === '1') {
                 window.location.href = 'https://c4llm3d1v4.github.io/sheusedtocallmediva/';
             } else {
                 alert('Invalid number. Try again.');
