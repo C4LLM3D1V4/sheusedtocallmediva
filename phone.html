@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Phone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="phone-container">
+        <div class="display">
+            <input type="text" id="input-number" readonly>
+        </div>
+        <div class="keypad">
+            <button class="key" onclick="pressKey(1)">1</button>
+            <button class="key" onclick="pressKey(2)">2</button>
+            <button class="key" onclick="pressKey(3)">3</button>
+            <button class="key" onclick="pressKey(4)">4</button>
+            <button class="key" onclick="pressKey(5)">5</button>
+            <button class="key" onclick="pressKey(6)">6</button>
+            <button class="key" onclick="pressKey(7)">7</button>
+            <button class="key" onclick="pressKey(8)">8</button>
+            <button class="key" onclick="pressKey(9)">9</button>
+            <button class="key" onclick="pressKey(0)">0</button>
+            <button class="key delete" onclick="clearInput()">Delete</button>
+            <button class="key submit" onclick="submitNumber()">Proceed</button>
+        </div>
+    </div>
+
+    <script>
+        function pressKey(num) {
+            const input = document.getElementById('input-number');
+            if (input.value.length < 6) {
+                input.value += num;
+            }
+        }
+
+        function clearInput() {
+            document.getElementById('input-number').value = '';
+        }
+
+        function submitNumber() {
+            const input = document.getElementById('input-number').value;
+            
+            // Redirecionar com base no número digitado
+            if (input === '1') {
+                window.location.href = 'https://c4llm3d1v4.github.io/sheusedtocallmediva/';
+            } else if (input === '654321') {
+                window.location.href = 'https://c4llm3d1v4.github.io/sheusedtocallmediva/';
+            } else {
+                alert('Invalid number.');
+            }
+        }
+    </script>
+</body>
+</html>
