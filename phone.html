@@ -60,6 +60,7 @@
 
         function playSound(key) {
             if (sounds[key]) {
+                sounds[key].currentTime = 0; // Reinicia o áudio do início
                 sounds[key].play();
             }
         }
@@ -76,10 +77,10 @@
             // Redirecionar com base no número digitado
             if (input === '113165') {
                 window.location.href = 'https://c4llm3d1v4.github.io/sheusedtocallmediva/birth.html';
-            } else if (input === '1') {
+            } else if (input === '654321') {
                 window.location.href = 'https://c4llm3d1v4.github.io/sheusedtocallmediva/';
             } else {
-                alert('Invalid number. Try again.');
+                alert('Invalid number.');
             }
         }
     </script>
